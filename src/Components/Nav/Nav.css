@@ -1,0 +1,98 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #007bff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.8em 0;
+}
+
+.navbar-brand h1 {
+  color: white;
+  margin: 0;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin-left: 20px;
+  display: flex;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+form {
+  position: relative;
+}
+
+input[type="search"] {
+  background-color: white;
+  border: 1px solid ghostwhite;
+  padding: 0.5em;
+  text-align: left;
+  width: 150px;
+  border-radius: 2px;
+  color: var(--ArgBlue1);
+}
+
+input[type="submit"] {
+  background-color: ghostwhite;
+  border: none;
+  margin-left: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 0.4em;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--ArgBlue1);
+}
+
+.references {
+  height: 200px;
+  width: 80%;
+  position: absolute;
+  left: 0;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background-color: var(--ArgBlue1);
+  border-radius: 2px;    
+  padding: 1em;
+}
+
+.references .close {
+position: absolute;
+right: 6px;
+top: 0;
+color: black;
+cursor: pointer;
+}
+
+.references .close:hover{
+color: white;
+}
+
+.references a {
+  color: black;
+  text-align: left;
+  cursor: pointer;
+}

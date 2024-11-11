@@ -1,0 +1,13 @@
+:root {
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Paleta 1 */
+  --ArgBlue1: #6cb4ee;
+  --Blue: #0000ff;
+  --BrandeisBlue: #0070ff;
+  --CambridgeBlue: #85b09a;
+}

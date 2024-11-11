@@ -1,0 +1,38 @@
+.cardWeather {
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .cardWeather:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cardWeather h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .cardWeather h3 {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .weatherDetails {
+    margin-top: 15px;
+  }
+  
+  .weatherDetails p {
+    display: flex;
+    align-items: center;
+  }
+  
+  .weatherDetails p svg {
+    margin-right: 10px;
+  }

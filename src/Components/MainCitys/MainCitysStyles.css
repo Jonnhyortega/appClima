@@ -1,0 +1,8 @@
+.main-citys {
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15px;
+  margin-top: 50px;
+}
