@@ -31,7 +31,3 @@ export const searchCountry = async (country) => {
   }
 };
 
-const prueba = await searchCountry("beijing")
-console.log(prueba[0].name)
-console.log(prueba[1])
-console.log(prueba)

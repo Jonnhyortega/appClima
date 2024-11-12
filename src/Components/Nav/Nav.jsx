@@ -1,11 +1,13 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import "./Nav.css";
 import { searchCountry } from "../../Utils/apiFetch";
+import { LocationContext } from "../../Context/LocationContext";
 
 export const Nav = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
   const debounceTimeout = useRef(null);
+  const { updateLocation, updateCity } = useContext(LocationContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,14 +29,21 @@ export const Nav = () => {
         const result = await searchCountry(value);
         if (Array.isArray(result)) {
           setData(result);
-          console.log(result);
           setError(null);
         } else {
           setError(result);
           setData([]);
         }
-      } return
+      }
     }, 300);
+  };
+
+  const handleClickItem = (lat, lon, city) => {
+    updateLocation(lat, lon);
+    updateCity(city);
+    console.log("Ciudad seleccionada:", city);
+    console.log("Coordenadas:", lat, lon);
+    // window.location.href = "/select-weather";
   };
 
   return (
@@ -68,8 +77,15 @@ export const Nav = () => {
                   x
                 </span>
                 {data.map((item) => (
-                  <a key={item.id}>
-                    {item.name},{item.state}
+                  <a
+                    key={item.id}
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault(); 
+                      handleClickItem(item.lat, item.lon, item.name);
+                    }}
+                  >
+                    {item.name}, {item.country}.
                   </a>
                 ))}
                 {error && <div>{error}</div>}

@@ -7,15 +7,14 @@ export default function CardWeather({ coordenadas, city }) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [lat, lon] = coordenadas;
+  
 
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const result = await weatherData(lat, lon);
+        const result = await weatherData(coordenadas[0], coordenadas[1]);
         setData(result);
         setLoading(false);
-        console.log(result);
       } catch (err) {
         setError("Error al obtener los datos del clima");
         setLoading(false);
@@ -23,7 +22,7 @@ export default function CardWeather({ coordenadas, city }) {
     };
 
     fetchWeather();
-  }, [lat, lon]); // Asegúrate de incluir lat y lon en las dependencias
+  }, coordenadas); 
 
   if (loading) {
     return <p>Cargando...</p>;
