@@ -4,6 +4,7 @@ import Layout from "./Components/Layout/Layout";
 import Nav from "./Components/Nav/Nav";
 import Routes from "./Routes/Routes";
 import { LocationProvider } from "./Context/LocationContext";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Layout>
         <Nav />
         <Routes />
+        <Footer />
       </Layout>
     </LocationProvider>
   );

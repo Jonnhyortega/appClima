@@ -4,12 +4,12 @@ import React, { createContext, useState } from "react";
 const LocationContext = createContext();
 
 const LocationProvider = ({ children }) => {
-  // const [location, setLocation] = useState(["-34.60", "-58.43"]);
-  const [location, setLocation] = useState(null);
-  const [cityContext, setCityContext] = useState(null);
+  const [location, setLocation] = useState(["51.50", "-0.12"]);
+  const [cityContext, setCityContext] = useState("Buenos Aires, Arg");
   const updateLocation = (lat, lon) => {
     setLocation([lat, lon]);
   };
+
   const updateCity = (cityString) => {
     setCityContext(cityString);
   };

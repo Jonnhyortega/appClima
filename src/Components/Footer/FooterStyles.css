@@ -1,0 +1,47 @@
+.footer {
+  background: linear-gradient(124deg, rgba(0,0,255,1) 0%, rgba(108,180,238,1) 62%);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-links {
+  margin-bottom: 15px;
+}
+
+.footer-links a,
+h2 > a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+h2 > a:hover {
+  color: var(--ArgBlue1);
+}
+
+.footer-socials {
+  margin-bottom: 15px;
+}
+
+.footer-socials a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #61dafb;
+}
+
+.footer-copy {
+  font-size: 14px;
+}

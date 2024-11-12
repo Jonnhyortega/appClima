@@ -1,0 +1,26 @@
+.searcher {
+    position: absolute;
+    top: 5%;
+    right: 1%;
+  }
+  
+  .references {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+  }
+  
+  .references a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+  }
+  
+  .references a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .close {
+    cursor: pointer;
+  }
